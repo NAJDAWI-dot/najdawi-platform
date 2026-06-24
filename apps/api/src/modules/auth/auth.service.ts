@@ -31,10 +31,14 @@ export class AuthService {
     const hashed = await argon2.hash(dto.password);
     const user = await this.usersService.create({ ...dto, password: hashed });
 
-    // Send welcome email asynchronously
-    this.mailService.sendWelcomeEmail(user.email, user.firstName).catch((err) => {
-      console.error('Failed to send welcome email in background', err);
-    });
+    // Send welcome email synchronously so we can catch errors and inform the user
+    try {
+      await this.mailService.sendWelcomeEmail(user.email, user.firstName);
+    } catch (err: any) {
+      console.error('Failed to send welcome email:', err);
+      // We still return tokens so they can log in, but we can throw an error if we want.
+      // However, it's better not to block registration for an email failure.
+    }
 
     return this.generateTokens(user);
   }
