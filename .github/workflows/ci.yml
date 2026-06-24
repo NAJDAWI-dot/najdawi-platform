@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [develop]
+
+jobs:
+  lint-and-test:
+    name: Lint & Test
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: mos_user
+          POSTGRES_PASSWORD: mos_pass
+          POSTGRES_DB: mos_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      DATABASE_URL: postgresql://mos_user:mos_pass@localhost:5432/mos_test
+      JWT_SECRET: ci-test-jwt-secret
+      JWT_REFRESH_SECRET: ci-test-refresh-secret
+      NODE_ENV: test
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint (all projects)
+        run: npx nx run-many --target=lint --all --parallel=3
+
+      - name: Test (all projects)
+        run: npx nx run-many --target=test --all --parallel=3 --passWithNoTests
+
+      - name: Build (web)
+        run: npx nx build web --configuration=production
+
+      - name: Build (api)
+        run: npx nx build api --configuration=production

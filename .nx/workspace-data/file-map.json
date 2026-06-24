@@ -1,0 +1,1087 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.8.14",
+  "deps": {
+    "cloudinary": "^2.10.0",
+    "multer": "^2.2.0",
+    "@nx/eslint": "^19.0.0",
+    "@nx/eslint-plugin": "^19.0.0",
+    "@nx/js": "^19.0.0",
+    "@nx/nest": "^19.0.0",
+    "@nx/react": "^19.0.0",
+    "@nx/vite": "^19.0.0",
+    "@nx/webpack": "^23.0.1",
+    "@nx/workspace": "^19.0.0",
+    "@types/multer": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.2.0",
+    "nx": "^19.0.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.4.0"
+  },
+  "pathMappings": {
+    "@mos/shared": [
+      "packages/shared/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "uploads/a0ec00ce-8a3f-499d-969e-fe48c2d4e7e8.docx",
+        "hash": "5045916707340931529"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "7807825284520058994"
+      },
+      {
+        "file": "uploads/e8cb0180-97c0-4acf-abb6-5d8712b4a3b0.docx",
+        "hash": "9012744586633932398"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "6089567531876635826"
+      },
+      {
+        "file": ".husky/pre-commit",
+        "hash": "8906304965158091741"
+      },
+      {
+        "file": "uploads/50834956-e488-4c64-bf58-4d158246b6d5.pdf",
+        "hash": "16757853284425848424"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "1969035034207093499"
+      },
+      {
+        "file": "README.md",
+        "hash": "7099676613801776607"
+      },
+      {
+        "file": ".github/workflows/deploy.yml",
+        "hash": "16244799298846554133"
+      },
+      {
+        "file": "package.json",
+        "hash": "15821582425477350960"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "9845833978392423924"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "8708059574749772377"
+      },
+      {
+        "file": ".env.example",
+        "hash": "15727305658842085867"
+      },
+      {
+        "file": "uploads/3d14b0c4-94ff-4a58-a48a-61679dbb7aed.docx",
+        "hash": "11675523046898407015"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "2121022286955093519"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "10601241434440564856"
+      },
+      {
+        "file": "nx.json",
+        "hash": "11028779542656958743"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6321891439257341309"
+      }
+    ],
+    "projectFileMap": {
+      "shared": [
+        {
+          "file": "packages/shared/package.json",
+          "hash": "13925258641138115229"
+        },
+        {
+          "file": "packages/shared/project.json",
+          "hash": "14161784035965260165"
+        },
+        {
+          "file": "packages/shared/src/enums.ts",
+          "hash": "8875409792193082147"
+        },
+        {
+          "file": "packages/shared/src/index.ts",
+          "hash": "10740655118360018980"
+        },
+        {
+          "file": "packages/shared/src/interfaces.ts",
+          "hash": "10156414458917278521"
+        }
+      ],
+      "api": [
+        {
+          "file": "apps/api/package.json",
+          "hash": "5873415049454236977",
+          "deps": [
+            "npm:@nestjs/cli",
+            "npm:@nestjs/schematics@10.2.3",
+            "npm:@nestjs/testing",
+            "npm:@types/bcryptjs",
+            "npm:@types/nodemailer",
+            "npm:@types/passport-google-oauth20",
+            "npm:@types/passport-jwt",
+            "npm:@types/uuid",
+            "npm:jest",
+            "npm:ts-jest",
+            "npm:typeorm-ts-node-commonjs",
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/core",
+            "npm:@nestjs/jwt",
+            "npm:@nestjs/mapped-types",
+            "npm:@nestjs/passport",
+            "npm:@nestjs/platform-express",
+            "npm:@nestjs/schedule",
+            "npm:@nestjs/serve-static",
+            "npm:@nestjs/typeorm",
+            "npm:bcryptjs",
+            "npm:class-transformer",
+            "npm:class-validator",
+            "npm:nodemailer",
+            "npm:passport",
+            "npm:passport-google-oauth20",
+            "npm:passport-jwt",
+            "npm:pg",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:stripe",
+            "npm:typeorm",
+            "npm:uuid"
+          ]
+        },
+        {
+          "file": "apps/api/project.json",
+          "hash": "10427008668979589728"
+        },
+        {
+          "file": "apps/api/src/app.module.ts",
+          "hash": "1880928014635434843",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:@nestjs/typeorm",
+            "npm:@nestjs/serve-static",
+            "npm:@nestjs/schedule"
+          ]
+        },
+        {
+          "file": "apps/api/src/common/decorators/current-user.decorator.ts",
+          "hash": "12551535132069107245",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/common/decorators/roles.decorator.ts",
+          "hash": "387871538325916277",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/common/filters/all-exceptions.filter.ts",
+          "hash": "5804438853766746435",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/common/guards/roles.guard.ts",
+          "hash": "1305493280007271322",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/database/data-source.ts",
+          "hash": "940907703841612839",
+          "deps": [
+            "npm:typeorm",
+            "npm:dotenv"
+          ]
+        },
+        {
+          "file": "apps/api/src/database/migrations/1700000000000-InitialSchema.ts",
+          "hash": "3151180800921955247",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/main.ts",
+          "hash": "14780415204217658110",
+          "deps": [
+            "npm:@nestjs/core",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/assessments/assessment.dto.ts",
+          "hash": "8887561273911658109",
+          "deps": [
+            "npm:class-validator",
+            "npm:class-transformer",
+            "npm:@nestjs/mapped-types"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/assessments/assessments.controller.ts",
+          "hash": "5123957201073701914",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/assessments/assessments.module.ts",
+          "hash": "10414892642124962717",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/assessments/assessments.service.ts",
+          "hash": "7284648242328866937",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/assessments/attempt-answer.entity.ts",
+          "hash": "1329183434559825833",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/assessments/attempt.entity.ts",
+          "hash": "10258333094486093625",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/assessments/choice.entity.ts",
+          "hash": "6301656680141748907",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/assessments/question.entity.ts",
+          "hash": "1328268078148427856",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/assessments/quiz.entity.ts",
+          "hash": "5562153879738332015",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/auth/auth.controller.ts",
+          "hash": "10055062926112107493",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/auth/auth.dto.ts",
+          "hash": "2389748556070089907",
+          "deps": [
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/auth/auth.module.ts",
+          "hash": "7342942779834471625",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/jwt",
+            "npm:@nestjs/passport",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/auth/auth.service.ts",
+          "hash": "9641981061924771008",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/jwt",
+            "npm:@nestjs/config",
+            "npm:bcryptjs"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/auth/jwt.strategy.ts",
+          "hash": "5802135584518218385",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport",
+            "npm:passport-jwt",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/content/content-item.dto.ts",
+          "hash": "14908758566131688032",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/content/content-item.entity.ts",
+          "hash": "15552391628775429872",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/content/content.controller.ts",
+          "hash": "10600715265050940767",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/content/content.module.ts",
+          "hash": "9328529851003748674",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/content/content.service.ts",
+          "hash": "7720175197864376783",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm",
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/courses/course.dto.ts",
+          "hash": "8090200587260606427",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/courses/course.entity.ts",
+          "hash": "2001476775780520553",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/courses/courses.controller.ts",
+          "hash": "5782575135055107499",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/courses/courses.module.ts",
+          "hash": "8116479658303966674",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/courses/courses.service.ts",
+          "hash": "8901870837548615642",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/discussions/discussion-reply.entity.ts",
+          "hash": "2583757607250349507",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/discussions/discussion-thread.entity.ts",
+          "hash": "4251937705297162003",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/discussions/discussions.controller.ts",
+          "hash": "10754775730288379766",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/discussions/discussions.module.ts",
+          "hash": "5098921721210896249",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/discussions/discussions.service.ts",
+          "hash": "18262736352394259944",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm",
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/enrollments/enrollment.dto.ts",
+          "hash": "14282021922170046017",
+          "deps": [
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/enrollments/enrollment.entity.ts",
+          "hash": "12458655737922663968",
+          "deps": [
+            "npm:typeorm",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/enrollments/enrollments.controller.ts",
+          "hash": "3506318252138590758",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/enrollments/enrollments.module.ts",
+          "hash": "4032868135986742222",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/enrollments/enrollments.service.ts",
+          "hash": "16075576202788864344",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm",
+            "npm:typeorm",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/enrollments/nudge.service.ts",
+          "hash": "15350066434668432282",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/schedule",
+            "npm:@nestjs/typeorm",
+            "npm:typeorm",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/mail/mail.module.ts",
+          "hash": "6319807625270669961",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/mail/mail.service.ts",
+          "hash": "6021792678963345929",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:nodemailer"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/notifications/notifications.module.ts",
+          "hash": "18047687624806512834",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/notifications/notifications.service.ts",
+          "hash": "16360817466778507334",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:nodemailer"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/payments/payments.controller.ts",
+          "hash": "15556217718936461688",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport",
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/payments/payments.module.ts",
+          "hash": "14235131692480614834",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/payments/payments.service.ts",
+          "hash": "15209504318149807621",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:stripe"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/reports/reports.controller.ts",
+          "hash": "18238488495749474891",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/reports/reports.module.ts",
+          "hash": "3591458590071224090",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/reports/reports.service.ts",
+          "hash": "13977818683002923148",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm",
+            "npm:typeorm",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/submissions/submission.dto.ts",
+          "hash": "3008676440533091848",
+          "deps": [
+            "npm:class-validator"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/submissions/submission.entity.ts",
+          "hash": "12482833774556498903",
+          "deps": [
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/submissions/submissions.controller.ts",
+          "hash": "1062862989464221803",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/passport"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/submissions/submissions.module.ts",
+          "hash": "14670740716983195840",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/submissions/submissions.service.ts",
+          "hash": "2316609534217810471",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm",
+            "npm:typeorm",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/uploads/uploads.controller.ts",
+          "hash": "617374262088519147",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/platform-express",
+            "npm:@nestjs/passport",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/uploads/uploads.module.ts",
+          "hash": "12048475942789648772",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/uploads/uploads.service.ts",
+          "hash": "4441095724253403992",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "npm:cloudinary",
+            "npm:uuid"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/users/user.dto.ts",
+          "hash": "11421689625128023933",
+          "deps": [
+            "npm:class-validator",
+            "npm:@nestjs/mapped-types",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/users/user.entity.ts",
+          "hash": "6792250449046650717",
+          "deps": [
+            "npm:typeorm",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/users/users.controller.ts",
+          "hash": "4461990445304830836",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/users/users.module.ts",
+          "hash": "7435667132235358291",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm"
+          ]
+        },
+        {
+          "file": "apps/api/src/modules/users/users.service.ts",
+          "hash": "172497095094655954",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/api/test-db.ts",
+          "hash": "16558662278696646426",
+          "deps": [
+            "npm:typeorm",
+            "npm:dotenv"
+          ]
+        },
+        {
+          "file": "apps/api/test-emails.ts",
+          "hash": "7382466600753049002",
+          "deps": [
+            "npm:nodemailer"
+          ]
+        },
+        {
+          "file": "apps/api/test/app.e2e-spec.ts",
+          "hash": "13525898118136714887",
+          "deps": [
+            "npm:@nestjs/testing",
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/tsconfig.json",
+          "hash": "10887937928599135137"
+        },
+        {
+          "file": "apps/api/webpack.config.js",
+          "hash": "9455722879556449233",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "web": [
+        {
+          "file": "apps/web/index.html",
+          "hash": "1588303548487228246"
+        },
+        {
+          "file": "apps/web/package.json",
+          "hash": "14219664100452786815",
+          "deps": [
+            "npm:@tailwindcss/forms",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@vitejs/plugin-react",
+            "npm:autoprefixer",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "npm:vite",
+            "npm:vitest@1.6.1",
+            "shared",
+            "npm:axios",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-pdf",
+            "npm:react-router-dom",
+            "npm:zustand"
+          ]
+        },
+        {
+          "file": "apps/web/postcss.config.js",
+          "hash": "6347547254252475020"
+        },
+        {
+          "file": "apps/web/project.json",
+          "hash": "17908139161472379365"
+        },
+        {
+          "file": "apps/web/src/App.tsx",
+          "hash": "9086845204724227780"
+        },
+        {
+          "file": "apps/web/src/components/layout/AdminNav.tsx",
+          "hash": "14780167360514816091",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/layout/AppLayout.tsx",
+          "hash": "17216087465961996889",
+          "deps": [
+            "npm:react-router-dom",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/layout/AuthLayout.tsx",
+          "hash": "2561539948782169626",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/index.css",
+          "hash": "3567409727170348863"
+        },
+        {
+          "file": "apps/web/src/main.tsx",
+          "hash": "3763330450389029209",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/admin/AdminCourseContentPage.tsx",
+          "hash": "11398507126385116789",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/admin/AdminCoursesPage.tsx",
+          "hash": "5381535280071321826",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/admin/AdminDashboardPage.tsx",
+          "hash": "16928961304780436019",
+          "deps": [
+            "npm:react",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/admin/AdminSubmissionsPage.tsx",
+          "hash": "819188325455681745",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/admin/AdminUsersPage.tsx",
+          "hash": "13456227297708556198",
+          "deps": [
+            "npm:react",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/admin/CourseModal.tsx",
+          "hash": "9562729012497410991",
+          "deps": [
+            "npm:react",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/auth/LoginPage.tsx",
+          "hash": "1986744917880391920",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/auth/RegisterPage.tsx",
+          "hash": "6037434100819851941",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/courses/CourseCatalogPage.tsx",
+          "hash": "7168136883908149223",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/courses/CourseDetailPage.tsx",
+          "hash": "5653917878553693594",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/courses/CourseLearnPage.tsx",
+          "hash": "11179228895918011170",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "shared",
+            "npm:react-pdf",
+            "npm:pdfjs-dist"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/courses/DiscussionsView.tsx",
+          "hash": "4176740165086324576",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/quiz/QuizPlayerPage.tsx",
+          "hash": "3811118668795703372",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/quiz/QuizResultsPage.tsx",
+          "hash": "7652403935959222158",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/student/CertificatePage.tsx",
+          "hash": "11747804850820942294",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/pages/student/StudentDashboardPage.tsx",
+          "hash": "8063956001640372482",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/router/AppRouter.tsx",
+          "hash": "4618461075795825474",
+          "deps": [
+            "npm:react-router-dom",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/router/ProtectedRoute.tsx",
+          "hash": "7188843002437100497",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/services/api.ts",
+          "hash": "594532051565092309",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/web/src/services/auth.service.ts",
+          "hash": "8942836828335854446",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/services/courses.service.ts",
+          "hash": "3334877070493224849",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/services/enrollments.service.ts",
+          "hash": "15538866321687828504",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/services/payments.service.ts",
+          "hash": "15560217348144779873"
+        },
+        {
+          "file": "apps/web/src/services/quiz.service.ts",
+          "hash": "15454585714443275032",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/services/reports.service.ts",
+          "hash": "275996199767827657",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/services/uploads.service.ts",
+          "hash": "17963680691381450808"
+        },
+        {
+          "file": "apps/web/src/services/users.service.ts",
+          "hash": "11214312378361005275",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/stores/authStore.ts",
+          "hash": "4670587147509241006",
+          "deps": [
+            "npm:zustand",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/stores/courseStore.ts",
+          "hash": "3628747861830928560",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/stores/enrollmentStore.ts",
+          "hash": "10495145676441647223",
+          "deps": [
+            "npm:zustand",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/stores/quizStore.ts",
+          "hash": "2154605462588405024",
+          "deps": [
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/web/src/test/setup.ts",
+          "hash": "4941352530169676329"
+        },
+        {
+          "file": "apps/web/tailwind.config.js",
+          "hash": "12361210624486490236"
+        },
+        {
+          "file": "apps/web/tsconfig.json",
+          "hash": "15826696764711783263"
+        },
+        {
+          "file": "apps/web/vite.config.ts",
+          "hash": "3821563174197533702",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        },
+        {
+          "file": "apps/web/vitest.config.ts",
+          "hash": "427630875486946942",
+          "deps": [
+            "npm:vitest@1.6.1",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ]
+    }
+  }
+}

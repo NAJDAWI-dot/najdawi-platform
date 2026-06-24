@@ -1,0 +1,54 @@
+{
+  "name": "mos-platform",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "nx serve web",
+    "dev:api": "nx serve api",
+    "build:web": "nx build web",
+    "build:api": "nx build api",
+    "test": "nx run-many --target=test --all",
+    "lint": "nx run-many --target=lint --all",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@nx/eslint": "^19.0.0",
+    "@nx/eslint-plugin": "^19.0.0",
+    "@nx/js": "^19.0.0",
+    "@nx/nest": "^19.0.0",
+    "@nx/react": "^19.0.0",
+    "@nx/vite": "^19.0.0",
+    "@nx/webpack": "^23.0.1",
+    "@nx/workspace": "^19.0.0",
+    "@types/multer": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.2.0",
+    "nx": "^19.0.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.4.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "cloudinary": "^2.10.0",
+    "multer": "^2.2.0"
+  }
+}

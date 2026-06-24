@@ -1,0 +1,7 @@
+node_modules
+dist
+.nx/cache
+.env
+*.local
+coverage
+.husky/_
