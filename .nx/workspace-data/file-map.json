@@ -723,7 +723,7 @@
         },
         {
           "file": "apps/api/src/modules/users/users.service.ts",
-          "hash": "14739114026815882132",
+          "hash": "1292555544714066498",
           "deps": [
             "npm:@nestjs/common",
             "npm:@nestjs/typeorm",

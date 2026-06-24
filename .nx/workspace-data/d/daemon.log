@@ -2464,3 +2464,38 @@ Error: Source project does not exist: npm:htmlparser2
 [NX Daemon Server] - 2026-06-24T19:58:27.547Z - Handled GET_FLAKY_TASKS. Handling time: 0. Response time: 0.
 [NX Daemon Server] - 2026-06-24T19:58:27.552Z - Closed a connection. Number of open connections: 0
 [NX Daemon Server] - 2026-06-24T19:58:27.573Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2026-06-24T19:59:36.402Z - Started listening on: \\.\pipe\nx\C:\Users\najda\AppData\Local\Temp\5921ed6314953f796031\d.sock
+[NX Daemon Server] - 2026-06-24T19:59:36.405Z - [WATCHER]: Subscribed to changes within: C:\Users\najda\mos-platform (native)
+[NX Daemon Server] - 2026-06-24T19:59:36.410Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2026-06-24T19:59:36.412Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2026-06-24T19:59:36.412Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2026-06-24T19:59:36.414Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2026-06-24T19:59:36.661Z - Time taken for 'Load Nx Plugin: C:\Users\najda\mos-platform\node_modules\nx\src\plugins\package-json' 241.28500000000003ms
+[NX Daemon Server] - 2026-06-24T19:59:36.662Z - Time taken for 'Load Nx Plugin: C:\Users\najda\mos-platform\node_modules\nx\src\plugins\project-json\build-nodes\project-json' 238.57459999999998ms
+[NX Daemon Server] - 2026-06-24T19:59:36.677Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2026-06-24T19:59:36.677Z - [REQUEST]: 
+[NX Daemon Server] - 2026-06-24T19:59:36.677Z - [REQUEST]: 
+[NX Daemon Server] - 2026-06-24T19:59:36.681Z - Time taken for 'loadNxPlugins' 261.8196ms
+[NX Daemon Server] - 2026-06-24T19:59:36.706Z - Time taken for 'build-project-configs' 14.423999999999978ms
+[NX Daemon Server] - 2026-06-24T19:59:36.900Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2026-06-24T19:59:36.901Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2026-06-24T19:59:36.902Z - Time taken for 'total for creating and serializing project graph' 487.26239999999996ms
+[NX Daemon Server] - 2026-06-24T19:59:36.903Z - Done responding to the client project-graph
+[NX Daemon Server] - 2026-06-24T19:59:36.903Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 487. Response time: 2.
+[NX Daemon Server] - 2026-06-24T19:59:36.949Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2026-06-24T19:59:36.949Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2026-06-24T19:59:36.949Z - Handled HASH_TASKS. Handling time: 11. Response time: 0.
+[NX Daemon Server] - 2026-06-24T19:59:36.958Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2026-06-24T19:59:36.958Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2026-06-24T19:59:36.958Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2026-06-24T19:59:42.722Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2026-06-24T19:59:42.722Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2026-06-24T19:59:42.722Z - Handled RECORD_OUTPUTS_HASH. Handling time: 6. Response time: 0.
+[NX Daemon Server] - 2026-06-24T19:59:42.725Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX Daemon Server] - 2026-06-24T19:59:42.726Z - Done responding to the client handleRecordTaskRuns
+[NX Daemon Server] - 2026-06-24T19:59:42.726Z - Handled RECORD_TASK_RUNS. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2026-06-24T19:59:42.727Z - [REQUEST]: Responding to the client. handleGetFlakyTasks
+[NX Daemon Server] - 2026-06-24T19:59:42.727Z - Done responding to the client handleGetFlakyTasks
+[NX Daemon Server] - 2026-06-24T19:59:42.727Z - Handled GET_FLAKY_TASKS. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2026-06-24T19:59:42.733Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2026-06-24T19:59:42.745Z - [WATCHER]: Processing file changes in outputs
