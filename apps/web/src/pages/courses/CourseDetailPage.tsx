@@ -170,7 +170,7 @@ export function CourseDetailPage() {
 
   const handleEnrollClick = () => {
     if (!user) {
-      navigate('/auth/login');
+      alert(`Diagnostic: You are NOT logged in!\nAccessToken exists: ${!!localStorage.getItem('accessToken')}\nMosAuth exists: ${!!localStorage.getItem('mos-auth')}`);
       return;
     }
     if (!id) return;

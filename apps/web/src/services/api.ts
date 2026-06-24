@@ -27,11 +27,9 @@ api.interceptors.response.use(
         localStorage.setItem('refreshToken', data.refreshToken);
         original.headers.Authorization = `Bearer ${data.accessToken}`;
         return api(original);
-      } catch {
-        localStorage.removeItem('accessToken');
-        localStorage.removeItem('refreshToken');
-        localStorage.removeItem('mos-auth');
-        window.location.reload();
+      } catch (e) {
+        console.error('Refresh token failed:', e);
+        // DO NOT FORCE LOGOUT HERE TO PREVENT REDIRECT LOOPS
       }
     }
     return Promise.reject(error);
