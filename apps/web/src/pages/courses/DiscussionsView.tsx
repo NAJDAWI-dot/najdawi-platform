@@ -5,7 +5,7 @@ interface Reply {
   id: string;
   body: string;
   createdAt: string;
-  user: { firstName: string; lastName: string };
+  author: { firstName: string; lastName: string };
 }
 
 interface Thread {
@@ -13,7 +13,7 @@ interface Thread {
   title: string;
   body: string;
   createdAt: string;
-  user: { firstName: string; lastName: string };
+  author: { firstName: string; lastName: string };
   replies: Reply[];
 }
 
@@ -129,10 +129,10 @@ export function DiscussionsView({ courseId }: { courseId: string }) {
                   
                   <div className="flex items-center gap-3 text-sm">
                     <div className="h-8 w-8 rounded-full bg-brand-900/50 flex items-center justify-center text-brand-300 font-bold border border-brand-800/50">
-                      {thread.user.firstName[0]}
+                      {thread.author.firstName[0]}
                     </div>
                     <div>
-                      <div className="text-slate-300 font-medium">{thread.user.firstName} {thread.user.lastName}</div>
+                      <div className="text-slate-300 font-medium">{thread.author.firstName} {thread.author.lastName}</div>
                       <div className="text-slate-500 text-xs">{new Date(thread.createdAt).toLocaleString()}</div>
                     </div>
                   </div>
@@ -144,12 +144,12 @@ export function DiscussionsView({ courseId }: { courseId: string }) {
                     {thread.replies.map(reply => (
                       <div key={reply.id} className="flex gap-4">
                         <div className="h-8 w-8 shrink-0 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 font-bold text-xs mt-1">
-                          {reply.user.firstName[0]}
+                          {reply.author.firstName[0]}
                         </div>
                         <div className="flex-1">
                           <div className="bg-slate-900 p-4 rounded-xl rounded-tl-none border border-slate-800 shadow-sm">
                             <div className="flex justify-between items-start mb-2">
-                              <span className="font-semibold text-slate-300 text-sm">{reply.user.firstName} {reply.user.lastName}</span>
+                              <span className="font-semibold text-slate-300 text-sm">{reply.author.firstName} {reply.author.lastName}</span>
                               <span className="text-xs text-slate-500">{new Date(reply.createdAt).toLocaleString()}</span>
                             </div>
                             <p className="text-slate-300 text-sm leading-relaxed">{reply.body}</p>
