@@ -2,7 +2,7 @@ services:
   - type: web
     name: najdawi-api
     env: node
-    buildCommand: npm install && npx nx build api
+    buildCommand: npm install && NX_DAEMON=false npx nx build api
     startCommand: node dist/apps/api/main.js
     envVars:
       - key: NODE_ENV
