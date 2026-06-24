@@ -9,7 +9,11 @@ export class MailService {
   private frontendUrl: string;
 
   constructor(private configService: ConfigService) {
-    this.resend = new Resend('re_QANXraNp_HJnca6ZuNqfn7ZjQhoUujCUv');
+    const resendKey = this.configService.get<string>('RESEND_API_KEY');
+    if (!resendKey) {
+      this.logger.warn('RESEND_API_KEY is not defined. Emails will not be sent.');
+    }
+    this.resend = new Resend(resendKey || 'dummy_key');
     this.frontendUrl = this.configService.get<string>('FRONTEND_URL') || 'http://localhost:4200';
   }
 
