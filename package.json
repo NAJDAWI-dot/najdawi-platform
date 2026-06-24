@@ -13,8 +13,7 @@
     "build:api": "nx build api",
     "test": "nx run-many --target=test --all",
     "lint": "nx run-many --target=lint --all",
-    "format": "prettier --write .",
-    "prepare": "husky install"
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@nx/eslint": "^19.0.0",
