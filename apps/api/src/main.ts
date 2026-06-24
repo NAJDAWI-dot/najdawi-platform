@@ -25,8 +25,23 @@ async function bootstrap() {
     }),
   );
 
+  const allowedOrigins = [
+    (process.env.FRONTEND_URL || 'http://localhost:5173').replace(/\/$/, ''),
+    'http://localhost:5173',
+    'http://localhost:4200',
+  ];
+
   app.enableCors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: (origin, callback) => {
+      // Allow requests with no origin (e.g. mobile apps, curl)
+      if (!origin) return callback(null, true);
+      const normalized = origin.replace(/\/$/, '');
+      if (allowedOrigins.includes(normalized)) {
+        callback(null, true);
+      } else {
+        callback(new Error(`CORS: origin ${origin} not allowed`));
+      }
+    },
     credentials: true,
   });
 
