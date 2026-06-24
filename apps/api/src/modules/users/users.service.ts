@@ -36,6 +36,10 @@ export class UsersService {
     return this.repo.findOne({ where: { email } });
   }
 
+  async findByUsername(username: string): Promise<User | null> {
+    return this.repo.findOne({ where: { username } });
+  }
+
   async findByEmailWithPassword(email: string): Promise<User | null> {
     return this.repo
       .createQueryBuilder('user')
