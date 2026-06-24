@@ -31,14 +31,33 @@ export class UploadsService {
       throw new BadRequestException('No file provided');
     }
 
-    // Save ALL files locally to bypass any cloud delivery restrictions
-    // Extract original extension or default to .bin
+    const cloudinaryUrl = this.cfg.get<string>('CLOUDINARY_URL');
+    
+    // If Cloudinary is configured, use it
+    if (cloudinaryUrl) {
+      return new Promise((resolve, reject) => {
+        const uploadStream = cloudinary.uploader.upload_stream(
+          { folder },
+          (error, result) => {
+            if (error) return reject(new BadRequestException('Cloudinary upload failed: ' + error.message));
+            resolve({ url: result.secure_url });
+          }
+        );
+        const readableStream = new Readable();
+        readableStream.push(file.buffer);
+        readableStream.push(null);
+        readableStream.pipe(uploadStream);
+      });
+    }
+
+    // Fallback to local
     const ext = path.extname(file.originalname) || '.bin';
     const filename = `${uuidv4()}${ext}`;
     const filepath = path.join(this.uploadDir, filename);
     fs.writeFileSync(filepath, file.buffer);
     
-    const baseUrl = this.cfg.get('API_URL') || 'http://localhost:3000';
+    // Default to render URL if not specified
+    const baseUrl = this.cfg.get('API_URL') || 'https://najdawi-platform.onrender.com';
     return { url: `${baseUrl}/api/uploads/${filename}` };
   }
 }
