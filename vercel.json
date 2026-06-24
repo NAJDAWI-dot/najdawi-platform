@@ -1,6 +1,5 @@
 {
-  "framework": "vite",
-  "buildCommand": "npx vite build --config apps/web/vite.config.ts",
+  "buildCommand": "cd /vercel/path0/apps/web && npx tsc && npx vite build",
   "outputDirectory": "apps/web/dist",
   "rewrites": [
     {
