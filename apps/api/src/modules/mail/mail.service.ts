@@ -74,7 +74,7 @@ export class MailService {
 
     try {
       const { data, error } = await this.resend.emails.send({
-        from: 'Najdawi Platform <onboarding@resend.dev>',
+        from: 'Najdawi Platform <no-reply@najdawi.com>',
         to,
         subject,
         html,
@@ -142,7 +142,7 @@ export class MailService {
 
     try {
       const { data, error } = await this.resend.emails.send({
-        from: 'Najdawi Platform <onboarding@resend.dev>',
+        from: 'Najdawi Platform <no-reply@najdawi.com>',
         to,
         subject,
         html,
