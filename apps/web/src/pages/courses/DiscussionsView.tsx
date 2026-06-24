@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
-import { useAuthStore } from '../../stores/authStore';
 
 interface Reply {
   id: string;
@@ -19,7 +18,6 @@ interface Thread {
 }
 
 export function DiscussionsView({ courseId }: { courseId: string }) {
-  const { user } = useAuthStore();
   const [threads, setThreads] = useState<Thread[]>([]);
   const [loading, setLoading] = useState(true);
   const [newTitle, setNewTitle] = useState('');

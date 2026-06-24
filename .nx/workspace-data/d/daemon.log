@@ -2395,3 +2395,37 @@ Error: Source project does not exist: npm:htmlparser2
 [NX Daemon Server] - 2026-06-24T18:45:48.368Z - [WATCHER]: Stopping the watcher for C:\Users\najda\mos-platform (sources)
 [NX Daemon Server] - 2026-06-24T18:45:48.368Z - Closed a connection. Number of open connections: 0
 [NX Daemon Server] - 2026-06-24T18:45:48.368Z - [WATCHER]: Stopping the watcher for C:\Users\najda\mos-platform (outputs)
+[NX Daemon Server] - 2026-06-24T19:52:15.086Z - Started listening on: \\.\pipe\nx\C:\Users\najda\AppData\Local\Temp\5921ed6314953f796031\d.sock
+[NX Daemon Server] - 2026-06-24T19:52:15.089Z - [WATCHER]: Subscribed to changes within: C:\Users\najda\mos-platform (native)
+[NX Daemon Server] - 2026-06-24T19:52:15.090Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2026-06-24T19:52:15.091Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2026-06-24T19:52:15.092Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2026-06-24T19:52:15.093Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2026-06-24T19:52:15.301Z - Time taken for 'Load Nx Plugin: C:\Users\najda\mos-platform\node_modules\nx\src\plugins\package-json' 202.08030000000002ms
+[NX Daemon Server] - 2026-06-24T19:52:15.302Z - Time taken for 'Load Nx Plugin: C:\Users\najda\mos-platform\node_modules\nx\src\plugins\project-json\build-nodes\project-json' 199.3603ms
+[NX Daemon Server] - 2026-06-24T19:52:15.318Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2026-06-24T19:52:15.318Z - [REQUEST]: 
+[NX Daemon Server] - 2026-06-24T19:52:15.318Z - [REQUEST]: 
+[NX Daemon Server] - 2026-06-24T19:52:15.323Z - Time taken for 'loadNxPlugins' 223.8844ms
+[NX Daemon Server] - 2026-06-24T19:52:15.352Z - Time taken for 'build-project-configs' 19.17349999999999ms
+[NX Daemon Server] - 2026-06-24T19:52:15.584Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2026-06-24T19:52:15.585Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2026-06-24T19:52:15.586Z - Time taken for 'total for creating and serializing project graph' 492.18210000000005ms
+[NX Daemon Server] - 2026-06-24T19:52:15.587Z - Done responding to the client project-graph
+[NX Daemon Server] - 2026-06-24T19:52:15.587Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 492. Response time: 2.
+[NX Daemon Server] - 2026-06-24T19:52:15.632Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2026-06-24T19:52:15.632Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2026-06-24T19:52:15.632Z - Handled HASH_TASKS. Handling time: 10. Response time: 0.
+[NX Daemon Server] - 2026-06-24T19:52:15.640Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2026-06-24T19:52:15.640Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2026-06-24T19:52:15.640Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2026-06-24T19:52:18.479Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2026-06-24T19:52:18.480Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2026-06-24T19:52:18.480Z - Handled RECORD_OUTPUTS_HASH. Handling time: 7. Response time: 1.
+[NX Daemon Server] - 2026-06-24T19:52:18.484Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX Daemon Server] - 2026-06-24T19:52:18.485Z - Done responding to the client handleRecordTaskRuns
+[NX Daemon Server] - 2026-06-24T19:52:18.485Z - Handled RECORD_TASK_RUNS. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2026-06-24T19:52:18.487Z - [REQUEST]: Responding to the client. handleGetFlakyTasks
+[NX Daemon Server] - 2026-06-24T19:52:18.488Z - Done responding to the client handleGetFlakyTasks
+[NX Daemon Server] - 2026-06-24T19:52:18.488Z - Handled GET_FLAKY_TASKS. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2026-06-24T19:52:18.495Z - Closed a connection. Number of open connections: 0

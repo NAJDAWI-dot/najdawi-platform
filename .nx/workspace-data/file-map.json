@@ -34,76 +34,84 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "uploads/a0ec00ce-8a3f-499d-969e-fe48c2d4e7e8.docx",
-        "hash": "5045916707340931529"
-      },
-      {
-        "file": ".github/workflows/ci.yml",
-        "hash": "7807825284520058994"
-      },
-      {
-        "file": "uploads/e8cb0180-97c0-4acf-abb6-5d8712b4a3b0.docx",
-        "hash": "9012744586633932398"
+        "file": ".env.example",
+        "hash": "15727305658842085867"
       },
       {
         "file": ".eslintrc.json",
         "hash": "6089567531876635826"
       },
       {
-        "file": ".husky/pre-commit",
-        "hash": "8906304965158091741"
-      },
-      {
-        "file": "uploads/50834956-e488-4c64-bf58-4d158246b6d5.pdf",
-        "hash": "16757853284425848424"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "1969035034207093499"
-      },
-      {
-        "file": "README.md",
-        "hash": "7099676613801776607"
+        "file": ".github/workflows/ci.yml",
+        "hash": "7807825284520058994"
       },
       {
         "file": ".github/workflows/deploy.yml",
         "hash": "16244799298846554133"
       },
       {
-        "file": "package.json",
-        "hash": "15821582425477350960"
+        "file": ".gitignore",
+        "hash": "10601241434440564856"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "9845833978392423924"
+        "file": ".husky/pre-commit",
+        "hash": "8906304965158091741"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "1969035034207093499"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6321891439257341309"
+      },
+      {
+        "file": "README.md",
+        "hash": "7099676613801776607"
       },
       {
         "file": "docker-compose.yml",
         "hash": "8708059574749772377"
       },
       {
-        "file": ".env.example",
-        "hash": "15727305658842085867"
+        "file": "nx.json",
+        "hash": "11028779542656958743"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "14059481849952731672"
+      },
+      {
+        "file": "package.json",
+        "hash": "15821582425477350960"
+      },
+      {
+        "file": "render.yaml",
+        "hash": "1277626019382458147"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "9845833978392423924"
       },
       {
         "file": "uploads/3d14b0c4-94ff-4a58-a48a-61679dbb7aed.docx",
         "hash": "11675523046898407015"
       },
       {
-        "file": "package-lock.json",
-        "hash": "2121022286955093519"
+        "file": "uploads/50834956-e488-4c64-bf58-4d158246b6d5.pdf",
+        "hash": "16757853284425848424"
       },
       {
-        "file": ".gitignore",
-        "hash": "10601241434440564856"
+        "file": "uploads/a0ec00ce-8a3f-499d-969e-fe48c2d4e7e8.docx",
+        "hash": "5045916707340931529"
       },
       {
-        "file": "nx.json",
-        "hash": "11028779542656958743"
+        "file": "uploads/e8cb0180-97c0-4acf-abb6-5d8712b4a3b0.docx",
+        "hash": "9012744586633932398"
       },
       {
-        "file": ".prettierrc",
-        "hash": "6321891439257341309"
+        "file": "vercel.json",
+        "hash": "18108595912617874876"
       }
     ],
     "projectFileMap": {
@@ -132,7 +140,7 @@
       "api": [
         {
           "file": "apps/api/package.json",
-          "hash": "5873415049454236977",
+          "hash": "3912995754981964031",
           "deps": [
             "npm:@nestjs/cli",
             "npm:@nestjs/schematics@10.2.3",
@@ -141,6 +149,7 @@
             "npm:@types/nodemailer",
             "npm:@types/passport-google-oauth20",
             "npm:@types/passport-jwt",
+            "npm:@types/sanitize-html",
             "npm:@types/uuid",
             "npm:jest",
             "npm:ts-jest",
@@ -154,10 +163,13 @@
             "npm:@nestjs/platform-express",
             "npm:@nestjs/schedule",
             "npm:@nestjs/serve-static",
+            "npm:@nestjs/throttler",
             "npm:@nestjs/typeorm",
+            "npm:argon2",
             "npm:bcryptjs",
             "npm:class-transformer",
             "npm:class-validator",
+            "npm:helmet",
             "npm:nodemailer",
             "npm:passport",
             "npm:passport-google-oauth20",
@@ -165,6 +177,7 @@
             "npm:pg",
             "npm:reflect-metadata",
             "npm:rxjs",
+            "npm:sanitize-html",
             "npm:stripe",
             "npm:typeorm",
             "npm:uuid"
@@ -176,13 +189,15 @@
         },
         {
           "file": "apps/api/src/app.module.ts",
-          "hash": "1880928014635434843",
+          "hash": "8683815919846549804",
           "deps": [
             "npm:@nestjs/common",
             "npm:@nestjs/config",
             "npm:@nestjs/typeorm",
             "npm:@nestjs/serve-static",
-            "npm:@nestjs/schedule"
+            "npm:@nestjs/schedule",
+            "npm:@nestjs/throttler",
+            "npm:@nestjs/core"
           ]
         },
         {
@@ -215,6 +230,14 @@
           ]
         },
         {
+          "file": "apps/api/src/common/pipes/sanitize.pipe.ts",
+          "hash": "3084546224803943822",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:sanitize-html"
+          ]
+        },
+        {
           "file": "apps/api/src/database/data-source.ts",
           "hash": "940907703841612839",
           "deps": [
@@ -231,10 +254,11 @@
         },
         {
           "file": "apps/api/src/main.ts",
-          "hash": "14780415204217658110",
+          "hash": "14956415650833517395",
           "deps": [
             "npm:@nestjs/core",
-            "npm:@nestjs/common"
+            "npm:@nestjs/common",
+            "npm:helmet"
           ]
         },
         {
@@ -330,12 +354,12 @@
         },
         {
           "file": "apps/api/src/modules/auth/auth.service.ts",
-          "hash": "9641981061924771008",
+          "hash": "5551191969255279962",
           "deps": [
             "npm:@nestjs/common",
             "npm:@nestjs/jwt",
             "npm:@nestjs/config",
-            "npm:bcryptjs"
+            "npm:argon2"
           ]
         },
         {
@@ -676,7 +700,7 @@
         },
         {
           "file": "apps/api/src/modules/users/user.entity.ts",
-          "hash": "6792250449046650717",
+          "hash": "7402238898319898973",
           "deps": [
             "npm:typeorm",
             "shared"
@@ -699,8 +723,11 @@
         },
         {
           "file": "apps/api/src/modules/users/users.service.ts",
-          "hash": "172497095094655954",
+          "hash": "14739114026815882132",
           "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/typeorm",
+            "npm:typeorm",
             "shared"
           ]
         },
@@ -1025,7 +1052,7 @@
         },
         {
           "file": "apps/web/src/stores/authStore.ts",
-          "hash": "4670587147509241006",
+          "hash": "12657876188298727575",
           "deps": [
             "npm:zustand",
             "shared"
