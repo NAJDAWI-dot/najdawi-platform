@@ -40,6 +40,7 @@ export class UploadsService {
           { folder },
           (error, result) => {
             if (error) return reject(new BadRequestException('Cloudinary upload failed: ' + error.message));
+            if (!result) return reject(new BadRequestException('Cloudinary upload returned no result'));
             resolve({ url: result.secure_url });
           }
         );
