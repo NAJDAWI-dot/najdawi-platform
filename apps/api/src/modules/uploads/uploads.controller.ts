@@ -15,7 +15,7 @@ export class UploadsController {
   @Roles(UserRole.ADMIN, UserRole.INSTRUCTOR)
   @UseInterceptors(FileInterceptor('file', {
     limits: {
-      fileSize: 5 * 1024 * 1024, // 5 MB limit
+      fileSize: 10 * 1024 * 1024, // 10 MB limit
     },
   }))
   async uploadImage(@UploadedFile() file: Express.Multer.File) {

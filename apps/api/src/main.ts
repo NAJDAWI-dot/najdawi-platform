@@ -1,11 +1,20 @@
 import { NestFactory } from '@nestjs/core';
+import { NestExpressApplication } from '@nestjs/platform-express';
 import { ValidationPipe } from '@nestjs/common';
 import helmet from 'helmet';
 import { AppModule } from './app.module';
 import { SanitizePipe } from './common/pipes/sanitize.pipe';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { rawBody: true });
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
+    rawBody: true,
+    bodyParser: false, // We set it manually below with higher limits
+  });
+
+  // Allow up to 10MB for JSON and URL-encoded bodies
+  app.useBodyParser('json', { limit: '10mb' });
+  app.useBodyParser('urlencoded', { limit: '10mb', extended: true });
+  app.useBodyParser('raw', { limit: '10mb' });
 
   // Add security headers to protect against common web vulnerabilities
   app.use(helmet());
