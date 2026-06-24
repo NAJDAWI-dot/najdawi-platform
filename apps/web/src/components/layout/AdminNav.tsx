@@ -8,6 +8,7 @@ export function AdminNav() {
   const links = [
     { name: 'Dashboard', href: '/admin/dashboard', roles: ['admin', 'instructor'] },
     { name: 'Manage Courses', href: '/admin/courses', roles: ['admin', 'instructor'] },
+    { name: '⏳ Pending Payments', href: '/admin/pending', roles: ['admin'] },
     { name: 'Manage Users', href: '/admin/users', roles: ['admin'] },
   ].filter(l => l.roles.includes(user?.role || ''));
 

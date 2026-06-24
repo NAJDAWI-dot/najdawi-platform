@@ -22,6 +22,14 @@ export class EnrollmentsController {
     return this.enrollmentsService.enroll(user.id, courseId);
   }
 
+  @Post(':courseId/pending')
+  enrollPending(
+    @Param('courseId') courseId: string,
+    @CurrentUser() user: { id: string },
+  ) {
+    return this.enrollmentsService.enrollPending(user.id, courseId);
+  }
+
   @Delete(':courseId')
   drop(
     @Param('courseId') courseId: string,
@@ -42,6 +50,27 @@ export class EnrollmentsController {
   @Get('my')
   getMyEnrollments(@CurrentUser() user: { id: string }) {
     return this.enrollmentsService.findByUser(user.id);
+  }
+
+  @Get('pending')
+  @UseGuards(RolesGuard)
+  @Roles(UserRole.ADMIN)
+  findAllPending() {
+    return this.enrollmentsService.findAllPending();
+  }
+
+  @Patch(':enrollmentId/approve')
+  @UseGuards(RolesGuard)
+  @Roles(UserRole.ADMIN)
+  approve(@Param('enrollmentId') enrollmentId: string) {
+    return this.enrollmentsService.approvePending(enrollmentId);
+  }
+
+  @Patch(':enrollmentId/reject')
+  @UseGuards(RolesGuard)
+  @Roles(UserRole.ADMIN)
+  reject(@Param('enrollmentId') enrollmentId: string) {
+    return this.enrollmentsService.rejectPending(enrollmentId);
   }
 
   @Get('course/:courseId')

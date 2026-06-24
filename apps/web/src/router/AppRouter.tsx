@@ -25,6 +25,7 @@ import { AdminCoursesPage } from '../pages/admin/AdminCoursesPage';
 import { AdminUsersPage } from '../pages/admin/AdminUsersPage';
 import { AdminCourseContentPage } from '../pages/admin/AdminCourseContentPage';
 import { AdminSubmissionsPage } from '../pages/admin/AdminSubmissionsPage';
+import { AdminPendingPage } from '../pages/admin/AdminPendingPage';
 
 // Quiz pages
 import { QuizPlayerPage } from '../pages/quiz/QuizPlayerPage';
@@ -70,6 +71,7 @@ export function AppRouter() {
         {/* Admin Only */}
         <Route element={<ProtectedRoute allowedRoles={[UserRole.ADMIN]} />}>
           <Route path="/admin/users" element={<AdminUsersPage />} />
+          <Route path="/admin/pending" element={<AdminPendingPage />} />
         </Route>
       </Route>
 

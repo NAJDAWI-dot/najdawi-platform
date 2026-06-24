@@ -9,9 +9,11 @@ interface EnrollmentState {
 
   fetchMyEnrollments: () => Promise<void>;
   enroll: (courseId: string) => Promise<void>;
+  enrollPending: (courseId: string) => Promise<void>;
   drop: (courseId: string) => Promise<void>;
   updateProgress: (courseId: string, progress: number, completedItemId?: string) => Promise<void>;
   isEnrolled: (courseId: string) => boolean;
+  isPending: (courseId: string) => boolean;
   clearError: () => void;
 }
 
@@ -35,6 +37,11 @@ export const useEnrollmentStore = create<EnrollmentState>((set, get) => ({
     set((s) => ({ enrollments: [...s.enrollments, enrollment] }));
   },
 
+  enrollPending: async (courseId) => {
+    const enrollment = await enrollmentsService.enrollPending(courseId);
+    set((s) => ({ enrollments: [...s.enrollments, enrollment] }));
+  },
+
   drop: async (courseId) => {
     await enrollmentsService.drop(courseId);
     set((s) => ({
@@ -54,6 +61,11 @@ export const useEnrollmentStore = create<EnrollmentState>((set, get) => ({
   isEnrolled: (courseId) => {
     const { enrollments } = get();
     return enrollments.some((e) => e.courseId === courseId && e.status === 'active');
+  },
+
+  isPending: (courseId) => {
+    const { enrollments } = get();
+    return enrollments.some((e) => e.courseId === courseId && e.status === 'pending');
   },
 
   clearError: () => set({ error: null }),
