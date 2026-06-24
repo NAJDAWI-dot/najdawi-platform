@@ -1,6 +1,5 @@
 {
-  "framework": "vite",
-  "buildCommand": "npx nx build web",
+  "buildCommand": "NX_DAEMON=false npx nx build web",
   "outputDirectory": "dist/apps/web",
   "rewrites": [
     {
