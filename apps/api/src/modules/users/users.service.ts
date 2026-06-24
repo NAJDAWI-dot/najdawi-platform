@@ -64,6 +64,6 @@ export class UsersService {
   }
 
   async updateLockout(id: string, failedLoginAttempts: number, lockedUntil: Date | null): Promise<void> {
-    await this.repo.update(id, { failedLoginAttempts, lockedUntil });
+    await this.repo.update(id, { failedLoginAttempts, lockedUntil: lockedUntil as any });
   }
 }

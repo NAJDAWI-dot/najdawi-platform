@@ -83,7 +83,7 @@
       },
       {
         "file": "package.json",
-        "hash": "15821582425477350960"
+        "hash": "13555798580239141353"
       },
       {
         "file": "render.yaml",
@@ -111,7 +111,7 @@
       },
       {
         "file": "vercel.json",
-        "hash": "18108595912617874876"
+        "hash": "16689745199029022171"
       }
     ],
     "projectFileMap": {
@@ -938,7 +938,7 @@
         },
         {
           "file": "apps/web/src/pages/courses/DiscussionsView.tsx",
-          "hash": "4176740165086324576",
+          "hash": "1094115008062039953",
           "deps": [
             "npm:react"
           ]
