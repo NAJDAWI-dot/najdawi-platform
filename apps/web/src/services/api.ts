@@ -30,7 +30,8 @@ api.interceptors.response.use(
       } catch {
         localStorage.removeItem('accessToken');
         localStorage.removeItem('refreshToken');
-        window.location.href = '/auth/login';
+        localStorage.removeItem('mos-auth');
+        window.location.reload();
       }
     }
     return Promise.reject(error);
