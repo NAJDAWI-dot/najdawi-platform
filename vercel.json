@@ -1,6 +1,6 @@
 {
-  "buildCommand": "NX_DAEMON=false npx nx build web",
-  "outputDirectory": "dist/apps/web",
+  "buildCommand": "npx vite build apps/web",
+  "outputDirectory": "apps/web/dist",
   "rewrites": [
     {
       "source": "/(.*)",
