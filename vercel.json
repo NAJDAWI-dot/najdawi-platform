@@ -1,6 +1,14 @@
 {
-  "buildCommand": "cd /vercel/path0/apps/web && npx tsc && npx vite build",
-  "outputDirectory": "apps/web/dist",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "apps/web/dist"
+      }
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

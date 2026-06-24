@@ -11,6 +11,7 @@
     "dev:api": "nx serve api",
     "build:web": "nx build web",
     "build:api": "nx build api",
+    "build": "cd apps/web && npx tsc && npx vite build",
     "test": "nx run-many --target=test --all",
     "lint": "nx run-many --target=lint --all",
     "format": "prettier --write ."
