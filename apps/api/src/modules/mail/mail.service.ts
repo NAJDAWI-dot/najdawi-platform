@@ -1,21 +1,15 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import * as nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
 @Injectable()
 export class MailService {
-  private transporter: nodemailer.Transporter;
+  private resend: Resend;
   private readonly logger = new Logger(MailService.name);
   private frontendUrl: string;
 
   constructor(private configService: ConfigService) {
-    this.transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: 'najdawihashem01@gmail.com',
-        pass: 'ymcwgqqysoevsjab',
-      },
-    });
+    this.resend = new Resend('re_QANXraNp_HJnca6ZuNqfn7ZjQhoUujCUv');
     this.frontendUrl = this.configService.get<string>('FRONTEND_URL') || 'http://localhost:4200';
   }
 
@@ -79,13 +73,17 @@ export class MailService {
     `;
 
     try {
-      await this.transporter.sendMail({
-        from: '"Najdawi Platform" <najdawihashem01@gmail.com>',
+      const { data, error } = await this.resend.emails.send({
+        from: 'Najdawi Platform <onboarding@resend.dev>',
         to,
         subject,
         html,
       });
-      this.logger.log(`Premium HTML nudge email sent successfully to ${to}`);
+      if (error) {
+        this.logger.error(`Resend API Error (Nudge):`, error);
+      } else {
+        this.logger.log(`Premium HTML nudge email sent successfully to ${to} [ID: ${data?.id}]`);
+      }
     } catch (error) {
       this.logger.error(`Failed to send premium email to ${to}`, error);
     }
@@ -143,13 +141,17 @@ export class MailService {
     `;
 
     try {
-      await this.transporter.sendMail({
-        from: '"Najdawi Platform" <najdawihashem01@gmail.com>',
+      const { data, error } = await this.resend.emails.send({
+        from: 'Najdawi Platform <onboarding@resend.dev>',
         to,
         subject,
         html,
       });
-      this.logger.log(`Premium HTML welcome email sent successfully to ${to}`);
+      if (error) {
+        this.logger.error(`Resend API Error (Welcome):`, error);
+      } else {
+        this.logger.log(`Premium HTML welcome email sent successfully to ${to} [ID: ${data?.id}]`);
+      }
     } catch (error) {
       this.logger.error(`Failed to send welcome email to ${to}`, error);
     }
